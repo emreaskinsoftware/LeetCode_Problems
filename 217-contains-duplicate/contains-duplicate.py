@@ -1,10 +1,9 @@
 class Solution(object):
     def containsDuplicate(self, nums):        
-        mevcut = set()
-        for num in nums:
-            if num in mevcut:
+        nums.sort()
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i-1]:
                 return True
-            mevcut.add(num)
-        
         return False
+
         
