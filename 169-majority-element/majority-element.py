@@ -1,10 +1,11 @@
 class Solution(object):
     def majorityElement(self, nums):
-        f = {}
+        etkin,adet = 0,0
         for num in nums:
-            if num not in f:
-                f[num] = 1
+            if adet == 0:
+                etkin = num
+            if num == etkin :
+                adet +=1
             else:
-                f[num] += 1
-        result = [x for x,y in f.items() if y > len(nums)/2]  
-        return result[0]      
+                adet -= 1       
+        return etkin
