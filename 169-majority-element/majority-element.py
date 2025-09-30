@@ -2,7 +2,7 @@ class Solution(object):
     def majorityElement(self, nums):
         f = {}
         for num in nums:
-            if num not in f.keys():
+            if num not in f:
                 f[num] = 1
             else:
                 f[num] += 1
