@@ -8,8 +8,10 @@ class MyStack(object):
         self.MyStack.append(x)
 
     def pop(self):
-        return self.MyStack.pop()
-        
+        #return self.MyStack.pop()
+        for i in range(len(self.MyStack)-1):
+            self.MyStack.append(self.MyStack.popleft())
+        return self.MyStack.popleft()        
 
     def top(self):
         return self.MyStack[-1]
