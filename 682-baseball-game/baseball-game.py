@@ -2,10 +2,8 @@ class Solution:
     def calPoints(self, operations: List[str]) -> int:
         if len(operations) == 0:
             return 0
-        ops = []
-        
-        for i in range(len(operations)):
-            op = operations[i]
+        ops = []       
+        for op in operations:
             if op == "C":
                 ops.pop()
             elif op == "+":
